@@ -1,0 +1,93 @@
+aid: isaac-instruments
+name: ISAAC Instruments
+review:
+  question: Does ISAAC Instruments expose a documented public WebSocket API?
+  answer: false
+  date: '2026-07-04'
+  reviewer: API Evangelist
+  asyncapiSpecCreated: false
+  asyncapiScopeNote: |
+    No AsyncAPI document was authored. ISAAC Instruments operates an "Open
+    Platform" with a partner-gated API, but there is no public developer portal
+    and no documented WebSocket (ws://ws://wss://) or SSE server-push transport
+    on ISAAC's own API. The full API Guide and reference live behind the ISAAC
+    InRealTime portal and Client Center and are provisioned to approved
+    integration partners. ISAAC's public and partner materials describe
+    request/response, integration-style API access (for example exporting
+    hours-of-service data), not a public streaming/bidirectional socket. With no
+    public, documented event-stream surface to model, no AsyncAPI file was created.
+findings:
+  summary: |
+    ISAAC Instruments does not publish a documented public WebSocket API. ISAAC
+    is a Canadian trucking in-cab technology and fleet management provider (ELD,
+    telematics, hours-of-service, driver workflow, messaging, fuel/performance).
+    It runs an "Open Platform" and states that "ISAAC's well-documented APIs make
+    integrating your product to ISAAC's platform easy" and that ISAAC APIs "let
+    you share your ISAAC data with your chosen vendors," with 80+ integration
+    partners. However, API access is partner-gated: vendors apply through the
+    ISAAC partner program (system integration via API or an Android app), and the
+    complete API Guide and reference are documented inside the ISAAC InRealTime
+    portal and Client Center rather than on a public developer site. One concrete
+    capability is publicly cited - exporting drivers' hours-of-service
+    information (time in each duty status and distance traveled) via ISAAC APIs.
+    No public REST reference, base URL, authentication detail, SDK, or WebSocket
+    endpoint is published on ISAAC's public website as of the review date.
+  accessModel: |
+    Partner-gated. There is no self-serve public developer portal. Prospective
+    integrators submit a partner application (company info, integration type -
+    API or Android app, product description, whether existing ISAAC clients have
+    requested the solution). Approved partners receive API documentation and
+    credentials through the InRealTime portal / Client Center. Pricing for the
+    underlying ISAAC platform is contact-sales / request-a-quote (custom,
+    per-fleet), not publicly listed per truck.
+  endpointsModeled: true
+  endpointsModeledNote: |
+    The logical APIs listed in apis.yml (Vehicles, Drivers, Hours of Service/ELD,
+    Positions, Trips, Messaging, Fuel/Performance, Events) are modeled from
+    ISAAC's public Open Platform description, its 80+ partner integration
+    categories (TMS/dispatch, maintenance, fuel tax, visibility, safety/
+    compliance), and the explicitly documented HOS export capability. Exact paths,
+    base URLs, request/response schemas, and authentication were NOT fabricated
+    because they are not public; they are documented in ISAAC's partner API Guide
+    and provisioned to approved partners.
+  transports:
+    - protocol: REST
+      scheme: https
+      documented: partner-gated
+      note: >-
+        ISAAC's Open Platform API is described as well-documented and used for
+        request/response integration (e.g. HOS export). Full reference is behind
+        the InRealTime portal / Client Center; not public.
+    - protocol: WebSocket
+      scheme: wss
+      documented: false
+      note: No WebSocket endpoint is documented anywhere in ISAAC's public materials as of the review date.
+    - protocol: SSE
+      scheme: https
+      documented: false
+      note: No Server-Sent Events server-push surface is documented publicly.
+sources:
+  - url: https://www.isaacinstruments.com/
+    type: Website
+    note: ELD and fleet management platform for the trucking industry.
+  - url: https://www.isaacinstruments.com/platform/seamless-integration/open-platform/
+    type: Documentation
+    note: Open Platform overview; "well-documented APIs," 80+ partner integrations, share ISAAC data with vendors.
+  - url: https://www.isaacinstruments.com/platform/seamless-integration/open-platform/join-isaac-become-a-partner/
+    type: PartnerProgram
+    note: Partner application; integration via API or Android app. Entry point for API access.
+  - url: https://www.isaacinstruments.com/platform/seamless-integration/
+    type: Documentation
+    note: Seamless integration; pre-built API integrations between ISAAC telematics/ELD and partner platforms.
+  - url: https://www2.isaacinstruments.com/request-a-price
+    type: Plans
+    note: Pricing is contact-sales / request-a-quote (custom per-fleet); no public per-truck price.
+actions:
+  asyncapiPath: null
+  apisYmlUpdated: true
+  reason: |
+    No public WebSocket or other server-push surface exists to model, and ISAAC's
+    own API is partner-gated request/response with no public reference. The
+    apis.yml documents the provider honestly as an Open Platform with a
+    partner-gated, modeled API surface (endpointsModeled: true); no AsyncAPI or
+    OpenAPI document was fabricated.

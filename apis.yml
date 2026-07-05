@@ -1,0 +1,164 @@
+aid: isaac-instruments
+url: https://raw.githubusercontent.com/api-evangelist/isaac-instruments/refs/heads/main/apis.yml
+name: ISAAC Instruments
+kind: company
+description: ISAAC Instruments is a Canadian provider of in-cab technology and fleet
+  management for the trucking industry - electronic logging devices (ELD), telematics,
+  hours-of-service (HOS) compliance, driver workflow, messaging, and fuel/performance
+  analytics, delivered as a fully managed hardware-plus-software platform. ISAAC runs
+  an "Open Platform" with a documented API that lets fleets and 80+ integration
+  partners (TMS/dispatch, maintenance, fuel tax, visibility, safety/compliance)
+  share ISAAC data with their chosen vendors. API access is partner-gated - vendors
+  apply through the ISAAC partner program and the full API Guide and reference live
+  behind the ISAAC InRealTime portal and Client Center rather than on a public
+  developer site. The API surface documented here is modeled from ISAAC's public
+  platform and partner materials; exact endpoints, base URLs, and authentication are
+  provisioned to approved partners.
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+tags:
+- Trucking
+- Telematics
+- ELD
+- Fleet Management
+- Hours of Service
+- Compliance
+- Transportation
+- Partner API
+created: '2026-07-04'
+modified: '2026-07-04'
+specificationVersion: '0.19'
+apis:
+- aid: isaac-instruments:isaac-instruments-vehicles-api
+  name: ISAAC Vehicles API
+  tags:
+  - Vehicles
+  - Assets
+  - Telematics
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://www.isaacinstruments.com/platform/seamless-integration/open-platform/
+  properties:
+  - url: https://www.isaacinstruments.com/platform/seamless-integration/open-platform/
+    type: Documentation
+  description: Modeled interface for retrieving fleet vehicles and tractor/trailer
+    assets configured on the ISAAC platform, including identifiers, VIN, and unit
+    metadata used to correlate telematics data. Endpoints are documented in ISAAC's
+    partner API Guide and provisioned to approved partners; surface is modeled here.
+- aid: isaac-instruments:isaac-instruments-drivers-api
+  name: ISAAC Drivers API
+  tags:
+  - Drivers
+  - Users
+  - Compliance
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://www.isaacinstruments.com/platform/seamless-integration/open-platform/
+  properties:
+  - url: https://www.isaacinstruments.com/platform/seamless-integration/open-platform/
+    type: Documentation
+  description: Modeled interface for retrieving drivers and their profile, licensing,
+    and assignment details as managed on the ISAAC platform. Endpoints are documented
+    in ISAAC's partner API Guide and provisioned to approved partners; surface is
+    modeled here.
+- aid: isaac-instruments:isaac-instruments-hours-of-service-api
+  name: ISAAC Hours of Service (ELD) API
+  tags:
+  - Hours of Service
+  - ELD
+  - HOS
+  - Compliance
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://www.isaacinstruments.com/platform/seamless-integration/open-platform/
+  properties:
+  - url: https://www.isaacinstruments.com/platform/seamless-integration/open-platform/
+    type: Documentation
+  description: Exports drivers' hours-of-service information captured by ISAAC's ELD -
+    time spent in each duty status and distance traveled - for compliance, payroll,
+    and TMS workflows. This capability is explicitly cited in ISAAC's public materials;
+    the concrete endpoints are documented in ISAAC's partner API Guide and modeled here.
+- aid: isaac-instruments:isaac-instruments-positions-api
+  name: ISAAC Positions API
+  tags:
+  - Positions
+  - GPS
+  - Location
+  - Visibility
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://www.isaacinstruments.com/platform/seamless-integration/open-platform/
+  properties:
+  - url: https://www.isaacinstruments.com/platform/seamless-integration/open-platform/
+    type: Documentation
+  description: Modeled interface for GPS positions and location breadcrumbs used by
+    visibility and tracking partners integrating with ISAAC telematics. Endpoints
+    are documented in ISAAC's partner API Guide and provisioned to approved partners;
+    surface is modeled here.
+- aid: isaac-instruments:isaac-instruments-trips-api
+  name: ISAAC Trips API
+  tags:
+  - Trips
+  - Routes
+  - Dispatch
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://www.isaacinstruments.com/platform/seamless-integration/open-platform/
+  properties:
+  - url: https://www.isaacinstruments.com/platform/seamless-integration/open-platform/
+    type: Documentation
+  description: Modeled interface for trips, stops, and route/dispatch data flowing
+    between ISAAC and TMS/dispatch partners. Endpoints are documented in ISAAC's
+    partner API Guide and provisioned to approved partners; surface is modeled here.
+- aid: isaac-instruments:isaac-instruments-messaging-api
+  name: ISAAC Messaging API
+  tags:
+  - Messaging
+  - Driver Communication
+  - Workflow
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://www.isaacinstruments.com/platform/seamless-integration/open-platform/
+  properties:
+  - url: https://www.isaacinstruments.com/platform/seamless-integration/open-platform/
+    type: Documentation
+  description: Modeled interface for driver-to-dispatch messaging and in-cab workflow
+    forms exchanged through the ISAAC platform. Endpoints are documented in ISAAC's
+    partner API Guide and provisioned to approved partners; surface is modeled here.
+- aid: isaac-instruments:isaac-instruments-fuel-api
+  name: ISAAC Fuel and Performance API
+  tags:
+  - Fuel
+  - Performance
+  - Analytics
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://www.isaacinstruments.com/platform/seamless-integration/open-platform/
+  properties:
+  - url: https://www.isaacinstruments.com/platform/seamless-integration/open-platform/
+    type: Documentation
+  description: Modeled interface for fuel consumption, idling, and driving-performance
+    metrics used by fuel-tax (IFTA) and coaching partners. Endpoints are documented
+    in ISAAC's partner API Guide and provisioned to approved partners; surface is
+    modeled here.
+- aid: isaac-instruments:isaac-instruments-events-api
+  name: ISAAC Events API
+  tags:
+  - Events
+  - Safety
+  - Diagnostics
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://www.isaacinstruments.com/platform/seamless-integration/open-platform/
+  properties:
+  - url: https://www.isaacinstruments.com/platform/seamless-integration/open-platform/
+    type: Documentation
+  description: Modeled interface for vehicle and safety events (fault/diagnostic codes,
+    safety-critical events) surfaced to safety/compliance and maintenance partners.
+    Endpoints are documented in ISAAC's partner API Guide and provisioned to approved
+    partners; surface is modeled here.
+common:
+- type: LinkedIn
+  url: https://www.linkedin.com/company/isaac-instruments
+- type: Website
+  url: https://www.isaacinstruments.com/
+- type: Documentation
+  url: https://www.isaacinstruments.com/platform/seamless-integration/open-platform/
+- type: PartnerProgram
+  url: https://www.isaacinstruments.com/platform/seamless-integration/open-platform/join-isaac-become-a-partner/
+- type: Plans
+  url: https://www2.isaacinstruments.com/request-a-price
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com
