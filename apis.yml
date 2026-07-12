@@ -149,6 +149,8 @@ apis:
     Endpoints are documented in ISAAC's partner API Guide and provisioned to approved
     partners; surface is modeled here.
 common:
+- type: DomainSecurity
+  url: security/isaac-instruments-domain-security.yml
 - type: LinkedIn
   url: https://www.linkedin.com/company/isaac-instruments
 - type: Website
