@@ -58,6 +58,10 @@ apis:
   name: ISAAC Drivers API
   tags:
   - Drivers
+  - User
+  - Compliance
+  tags_raw:
+  - Drivers
   - Users
   - Compliance
   image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
@@ -120,6 +124,10 @@ apis:
   tags:
   - Messaging
   - Driver Communication
+  - Workflows
+  tags_raw:
+  - Messaging
+  - Driver Communication
   - Workflow
   image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
   humanURL: https://www.isaacinstruments.com/platform/seamless-integration/open-platform/
@@ -147,6 +155,10 @@ apis:
 - aid: isaac-instruments:isaac-instruments-events-api
   name: ISAAC Events API
   tags:
+  - Event
+  - Safety
+  - Diagnostics
+  tags_raw:
   - Events
   - Safety
   - Diagnostics
