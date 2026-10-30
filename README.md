@@ -1,4 +1,4 @@
-# ISAAC Instruments (isaac-instruments)
+# ISAAC Instruments
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,72 +64,92 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-ISAAC Instruments is a Canadian provider of in-cab technology and fleet management for the trucking industry - electronic logging devices (ELD), telematics, hours-of-service (HOS) compliance, driver workflow, messaging, and fuel/performance analytics, delivered as a fully managed hardware-plus-software platform. ISAAC runs an "Open Platform" with a documented API that lets fleets and 80+ integration partners (TMS/dispatch, maintenance, fuel tax, visibility, safety/compliance) share ISAAC data with their chosen vendors.
+ISAAC Instruments is a Canadian provider of in-cab technology and fleet management for the trucking industry - electronic logging devices (ELD), telematics, hours-of-service (HOS) compliance, driver workflow, messaging, and fuel/performance analytics, delivered as a fully managed hardware-plus-software platform. ISAAC runs an "Open Platform" with a documented API that lets fleets and 80+ integration partners (TMS/dispatch, maintenance, fuel tax, visibility, safety/compliance) share ISAAC data with their chosen vendors. API access is partner-gated - vendors apply through the ISAAC partner program and the full API Guide and reference live behind the ISAAC InRealTime portal and Client Center rather than on a public developer site. The API surface documented here is modeled from ISAAC's public platform and partner materials; exact endpoints, base URLs, and authentication are provisioned to approved partners.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/isaac-instruments/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/isaac-instruments/refs/heads/main/apis.yml)
+**Areas:** Trucking · Telematics · ELD · Fleet Management · Hours of Service · Compliance · Transportation · Partner API
 
-## Access Model (Important)
+## ISAAC Instruments on APIs.io
 
-ISAAC's API is **real but partner-gated** - there is no self-serve public developer portal:
+Everything profiled for ISAAC Instruments is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/isaac-instruments/](https://apis.io/providers/isaac-instruments/)** — or go straight to one of the APIs or properties below.
 
-- Vendors apply through the **ISAAC partner program** (system integration via API, or an Android app on the in-cab device).
-- The **complete API Guide and reference are documented inside the ISAAC InRealTime portal and Client Center**, provisioned to approved partners - not published on a public developer site.
-- One capability is explicitly cited in ISAAC's public materials: **exporting drivers' hours-of-service information** (time spent in each duty status and distance traveled) via ISAAC APIs.
-- Platform **pricing is contact-sales / request-a-quote** (custom, per-fleet); no public per-truck price is listed.
+### APIs (8)
 
-Because the concrete endpoints, base URLs, request/response schemas, and authentication are not public, the API surface below is **modeled** from ISAAC's public Open Platform description and partner integration categories (`endpointsModeled: true` in `review.yml`). No OpenAPI or AsyncAPI document was fabricated.
+- [ISAAC Vehicles API](https://apis.io/apis/isaac-instruments/isaac-instruments-vehicles-api/) — Modeled interface for retrieving fleet vehicles and tractor/trailer assets configured on the ISAAC platform, including identifiers, VIN, and unit metadata…
+- [ISAAC Drivers API](https://apis.io/apis/isaac-instruments/isaac-instruments-drivers-api/) — Modeled interface for retrieving drivers and their profile, licensing, and assignment details as managed on the ISAAC platform. Endpoints are documented in…
+- [ISAAC Hours of Service (ELD) API](https://apis.io/apis/isaac-instruments/isaac-instruments-hours-of-service-api/) — Exports drivers' hours-of-service information captured by ISAAC's ELD - time spent in each duty status and distance traveled - for compliance, payroll, and…
+- [ISAAC Positions API](https://apis.io/apis/isaac-instruments/isaac-instruments-positions-api/) — Modeled interface for GPS positions and location breadcrumbs used by visibility and tracking partners integrating with ISAAC telematics. Endpoints are…
+- [ISAAC Trips API](https://apis.io/apis/isaac-instruments/isaac-instruments-trips-api/) — Modeled interface for trips, stops, and route/dispatch data flowing between ISAAC and TMS/dispatch partners. Endpoints are documented in ISAAC's partner API…
+- [ISAAC Messaging API](https://apis.io/apis/isaac-instruments/isaac-instruments-messaging-api/) — Modeled interface for driver-to-dispatch messaging and in-cab workflow forms exchanged through the ISAAC platform. Endpoints are documented in ISAAC's…
+- [ISAAC Fuel and Performance API](https://apis.io/apis/isaac-instruments/isaac-instruments-fuel-api/) — Modeled interface for fuel consumption, idling, and driving-performance metrics used by fuel-tax (IFTA) and coaching partners. Endpoints are documented in…
+- [ISAAC Events API](https://apis.io/apis/isaac-instruments/isaac-instruments-events-api/) — Modeled interface for vehicle and safety events (fault/diagnostic codes, safety-critical events) surfaced to safety/compliance and maintenance partners.…
 
-## Tags
+### Published properties
 
-- Trucking
-- Telematics
-- ELD
-- Fleet Management
-- Hours of Service
-- Compliance
-- Transportation
-- Partner API
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## Timestamps
+#### Security (1)
 
-- **Created:** 2026-07-04
-- **Modified:** 2026-07-04
+Authentication, trust centre, and vulnerability disclosure.
 
-## APIs (Modeled)
+- [Isaac Instruments Domain Security](https://apis.io/security/isaac-instruments/isaac-instruments-domain-security/)
 
-### ISAAC Vehicles API
-Fleet vehicles and tractor/trailer assets (identifiers, VIN, unit metadata) used to correlate telematics data.
+## Where to find this API
 
-### ISAAC Drivers API
-Drivers and their profile, licensing, and assignment details managed on the ISAAC platform.
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
-### ISAAC Hours of Service (ELD) API
-Exports drivers' hours-of-service information captured by ISAAC's ELD - time in each duty status and distance traveled - for compliance, payroll, and TMS workflows. Explicitly cited in ISAAC's public materials.
-
-### ISAAC Positions API
-GPS positions and location breadcrumbs used by visibility and tracking partners.
-
-### ISAAC Trips API
-Trips, stops, and route/dispatch data flowing between ISAAC and TMS/dispatch partners.
-
-### ISAAC Messaging API
-Driver-to-dispatch messaging and in-cab workflow forms exchanged through the ISAAC platform.
-
-### ISAAC Fuel and Performance API
-Fuel consumption, idling, and driving-performance metrics used by fuel-tax (IFTA) and coaching partners.
-
-### ISAAC Events API
-Vehicle and safety events (fault/diagnostic codes, safety-critical events) surfaced to safety/compliance and maintenance partners.
-
-## Common Properties
-
-- [LinkedIn](https://www.linkedin.com/company/isaac-instruments)
 - [Website](https://www.isaacinstruments.com/)
-- [Documentation - Open Platform](https://www.isaacinstruments.com/platform/seamless-integration/open-platform/)
-- [Partner Program](https://www.isaacinstruments.com/platform/seamless-integration/open-platform/join-isaac-become-a-partner/)
-- [Plans - Request a Price](https://www2.isaacinstruments.com/request-a-price)
+- [Documentation](https://www.isaacinstruments.com/platform/seamless-integration/open-platform/)
+- [Blog](https://www.isaacinstruments.com/resource-hub/blog/)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 7.3** — minimal · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 62.5 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 11.9 |
+| Access clarity | 0.0 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 5.9** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/isaac-instruments/](https://apis.io/providers/isaac-instruments/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for ISAAC Instruments: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/isaac-instruments/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
